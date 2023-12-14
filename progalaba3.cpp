@@ -9,18 +9,18 @@ class Truck;
 class Car;
 
 class Company {
-private: //атрибуты
-	string name; //атрибут из UML Class Diagram
-	string matching_addresses; //атрибут 1 для функции-члена 1
-	string existence_subsidiaries; //атрибут 2 для функции-члена 2
+private: //Р°С‚СЂРёР±СѓС‚С‹
+	string name; //Р°С‚СЂРёР±СѓС‚ РёР· UML Class Diagram
+	string matching_addresses; //Р°С‚СЂРёР±СѓС‚ 1 РґР»СЏ С„СѓРЅРєС†РёРё-С‡Р»РµРЅР° 1
+	string existence_subsidiaries; //Р°С‚СЂРёР±СѓС‚ 2 РґР»СЏ С„СѓРЅРєС†РёРё-С‡Р»РµРЅР° 2
 
 public:
-	//Функция вывода
+	//Р¤СѓРЅРєС†РёСЏ РІС‹РІРѕРґР°
 	void print() {
 		cout << "\nCompany: " << name << "\nMatching Addresses: " << matching_addresses << "\nExistence Subsidiaries: " << existence_subsidiaries << endl;
 	}
 
-	//Функция-член 1. Проверяет, совпадает ли юридический адрес с фактическим
+	//Р¤СѓРЅРєС†РёСЏ-С‡Р»РµРЅ 1. РџСЂРѕРІРµСЂСЏРµС‚, СЃРѕРІРїР°РґР°РµС‚ Р»Рё СЋСЂРёРґРёС‡РµСЃРєРёР№ Р°РґСЂРµСЃ СЃ С„Р°РєС‚РёС‡РµСЃРєРёРј
 	string MatchingAddresses() {
 		string legal_address, physical_address;
 
@@ -39,7 +39,7 @@ public:
 		return matching_addresses;
 	}
 
-	//Функция-член 2. Сообщает, существуют ли у компании дочерние филиалы
+	//Р¤СѓРЅРєС†РёСЏ-С‡Р»РµРЅ 2. РЎРѕРѕР±С‰Р°РµС‚, СЃСѓС‰РµСЃС‚РІСѓСЋС‚ Р»Рё Сѓ РєРѕРјРїР°РЅРёРё РґРѕС‡РµСЂРЅРёРµ С„РёР»РёР°Р»С‹
 	string ExistenceSubsidiaries() {
 
 		string subsidiaries;
@@ -57,7 +57,7 @@ public:
 		return existence_subsidiaries;
 	}
 
-	//Конструктор 1. Дефолтный
+	//РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ 1. Р”РµС„РѕР»С‚РЅС‹Р№
 
 	Company() {
 		name = "Yandex";
@@ -65,30 +65,30 @@ public:
 		existence_subsidiaries = "The company has subsidiaries";
 	}
 
-	//Конструктор 2. Недефолтный через список инициализаторов членов
+	//РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ 2. РќРµРґРµС„РѕР»С‚РЅС‹Р№ С‡РµСЂРµР· СЃРїРёСЃРѕРє РёРЅРёС†РёР°Р»РёР·Р°С‚РѕСЂРѕРІ С‡Р»РµРЅРѕРІ
 
 	Company(string p_name, string p_matching_addresses, string p_existence_subsidiaries) : name(p_name), matching_addresses(p_matching_addresses), existence_subsidiaries(p_existence_subsidiaries)
 	{}
 
-protected: //ассоциация
-	Employee** employed_employee; //нанятый сотрудник (вид ассоциации: один-ко-многим)
-	Vehicle** hired_vehicle; //трансп. средство, взятое в аренду (вид ассоциации: один-ко-многим)
+protected: //Р°СЃСЃРѕС†РёР°С†РёСЏ
+	Employee** employed_employee; //РЅР°РЅСЏС‚С‹Р№ СЃРѕС‚СЂСѓРґРЅРёРє (РІРёРґ Р°СЃСЃРѕС†РёР°С†РёРё: РѕРґРёРЅ-РєРѕ-РјРЅРѕРіРёРј)
+	Vehicle** hired_vehicle; //С‚СЂР°РЅСЃРї. СЃСЂРµРґСЃС‚РІРѕ, РІР·СЏС‚РѕРµ РІ Р°СЂРµРЅРґСѓ (РІРёРґ Р°СЃСЃРѕС†РёР°С†РёРё: РѕРґРёРЅ-РєРѕ-РјРЅРѕРіРёРј)
 
 };
 
 class Employee {
-private: //атрибуты
-	string name; //атрибут из UML Class Diagram
-	string having_children; //атрибут 1 для функции-члена 1
-	string higher_education; //атрибут 2 для функции-члена 2
+private: //Р°С‚СЂРёР±СѓС‚С‹
+	string name; //Р°С‚СЂРёР±СѓС‚ РёР· UML Class Diagram
+	string having_children; //Р°С‚СЂРёР±СѓС‚ 1 РґР»СЏ С„СѓРЅРєС†РёРё-С‡Р»РµРЅР° 1
+	string higher_education; //Р°С‚СЂРёР±СѓС‚ 2 РґР»СЏ С„СѓРЅРєС†РёРё-С‡Р»РµРЅР° 2
 
 public:
-	//Функция вывода
+	//Р¤СѓРЅРєС†РёСЏ РІС‹РІРѕРґР°
 	void print() {
 		cout << "\nEmployee: " << name << "\nHaving Children: " << having_children << "\nHigher Education: " << higher_education << endl;
 	}
 
-	//Функция-член 1. Сообщает информацию о наличии/отсутствии детей
+	//Р¤СѓРЅРєС†РёСЏ-С‡Р»РµРЅ 1. РЎРѕРѕР±С‰Р°РµС‚ РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ РЅР°Р»РёС‡РёРё/РѕС‚СЃСѓС‚СЃС‚РІРёРё РґРµС‚РµР№
 	string HavingChildren() {
 
 		string children;
@@ -106,7 +106,7 @@ public:
 		return having_children;
 	}
 
-	//Функция-член 2. Сообщает информацию о наличии/отсутствии высшего образования
+	//Р¤СѓРЅРєС†РёСЏ-С‡Р»РµРЅ 2. РЎРѕРѕР±С‰Р°РµС‚ РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ РЅР°Р»РёС‡РёРё/РѕС‚СЃСѓС‚СЃС‚РІРёРё РІС‹СЃС€РµРіРѕ РѕР±СЂР°Р·РѕРІР°РЅРёСЏ
 	string HigherEducation() {
 		string education;
 
@@ -124,7 +124,7 @@ public:
 		return higher_education;
 	}
 
-	//Конструктор 1. Дефолтный
+	//РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ 1. Р”РµС„РѕР»С‚РЅС‹Р№
 
 	Employee() {
 		name = "Oleg";
@@ -132,45 +132,45 @@ public:
 		higher_education = "The employee does not have a higher education";
 	}
 
-	//Конструктор 2. Недефолтный через список инициализаторов членов
+	//РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ 2. РќРµРґРµС„РѕР»С‚РЅС‹Р№ С‡РµСЂРµР· СЃРїРёСЃРѕРє РёРЅРёС†РёР°Р»РёР·Р°С‚РѕСЂРѕРІ С‡Р»РµРЅРѕРІ
 
 	Employee(string p_name, string p_having_children, string p_higher_education) : name(p_name), having_children(p_having_children), higher_education(p_higher_education)
 	{}
 
-protected: //ассоциация
-	Company* empoying_company; //компания-работодатель (вид ассоциации: один-ко-многим)
-	Vehicle** driven_vehicle; //управляемая машина (вид ассоциации: один-ко-многим)
+protected: //Р°СЃСЃРѕС†РёР°С†РёСЏ
+	Company* empoying_company; //РєРѕРјРїР°РЅРёСЏ-СЂР°Р±РѕС‚РѕРґР°С‚РµР»СЊ (РІРёРґ Р°СЃСЃРѕС†РёР°С†РёРё: РѕРґРёРЅ-РєРѕ-РјРЅРѕРіРёРј)
+	Vehicle** driven_vehicle; //СѓРїСЂР°РІР»СЏРµРјР°СЏ РјР°С€РёРЅР° (РІРёРґ Р°СЃСЃРѕС†РёР°С†РёРё: РѕРґРёРЅ-РєРѕ-РјРЅРѕРіРёРј)
 
 };
 
 class Vehicle {
-private: //атрибуты
-	string registration_number; //атрибут из UML Class Diagram 
+private: //Р°С‚СЂРёР±СѓС‚С‹
+	string registration_number; //Р°С‚СЂРёР±СѓС‚ РёР· UML Class Diagram 
 
-protected: //сделала protected, чтобы потом использовать в наследовании
-	string value_axes; //атрибут для функции-члена 1
-	string country_vehicle; //атрибут для функции-члена 2
-	string cost_vehicle; //атрибут для произвольного конструктора
-	string currency; //атрибут для произвольного конструктора
-	string mileage; //атрибут для произвольного конструктора
+protected: //СЃРґРµР»Р°Р»Р° protected, С‡С‚РѕР±С‹ РїРѕС‚РѕРј РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РІ РЅР°СЃР»РµРґРѕРІР°РЅРёРё
+	string value_axes; //Р°С‚СЂРёР±СѓС‚ РґР»СЏ С„СѓРЅРєС†РёРё-С‡Р»РµРЅР° 1
+	string country_vehicle; //Р°С‚СЂРёР±СѓС‚ РґР»СЏ С„СѓРЅРєС†РёРё-С‡Р»РµРЅР° 2
+	string cost_vehicle; //Р°С‚СЂРёР±СѓС‚ РґР»СЏ РїСЂРѕРёР·РІРѕР»СЊРЅРѕРіРѕ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°
+	string currency; //Р°С‚СЂРёР±СѓС‚ РґР»СЏ РїСЂРѕРёР·РІРѕР»СЊРЅРѕРіРѕ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°
+	string mileage; //Р°С‚СЂРёР±СѓС‚ РґР»СЏ РїСЂРѕРёР·РІРѕР»СЊРЅРѕРіРѕ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°
 
 public:
-	//Функция вывода для дефолтного и недефелтного конструктора
+	//Р¤СѓРЅРєС†РёСЏ РІС‹РІРѕРґР° РґР»СЏ РґРµС„РѕР»С‚РЅРѕРіРѕ Рё РЅРµРґРµС„РµР»С‚РЅРѕРіРѕ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°
 	void print() {
 		cout << "\nRegistration number: " << registration_number << "\nValue axes: " << value_axes << "\nCountry vehicle: " << country_vehicle << endl;
 	}
 
-	//Функция вывода для произвольного конструктора 1
+	//Р¤СѓРЅРєС†РёСЏ РІС‹РІРѕРґР° РґР»СЏ РїСЂРѕРёР·РІРѕР»СЊРЅРѕРіРѕ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° 1
 	void print2() {
 		cout << "\nCost of the vehicle: " << cost_vehicle << "\nCurrency: " << currency << endl;
 	}
 
-	//Функция вывода для произвольного конструктора 2
+	//Р¤СѓРЅРєС†РёСЏ РІС‹РІРѕРґР° РґР»СЏ РїСЂРѕРёР·РІРѕР»СЊРЅРѕРіРѕ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° 2
 	void print3() {
 		cout << "\nMileage of the vehicle: " << mileage << endl;
 	}
 
-	//Функция-член 1. Сообщает, какой тип транспортного средства по количеству осей 
+	//Р¤СѓРЅРєС†РёСЏ-С‡Р»РµРЅ 1. РЎРѕРѕР±С‰Р°РµС‚, РєР°РєРѕР№ С‚РёРї С‚СЂР°РЅСЃРїРѕСЂС‚РЅРѕРіРѕ СЃСЂРµРґСЃС‚РІР° РїРѕ РєРѕР»РёС‡РµСЃС‚РІСѓ РѕСЃРµР№ 
 	string Axes() {
 		
 		int amount_axes;
@@ -195,7 +195,7 @@ public:
 		return value_axes;
 	}
 
-	//Функция-член 2. Сообщает, какой стране принадлежит марка транспортного средства
+	//Р¤СѓРЅРєС†РёСЏ-С‡Р»РµРЅ 2. РЎРѕРѕР±С‰Р°РµС‚, РєР°РєРѕР№ СЃС‚СЂР°РЅРµ РїСЂРёРЅР°РґР»РµР¶РёС‚ РјР°СЂРєР° С‚СЂР°РЅСЃРїРѕСЂС‚РЅРѕРіРѕ СЃСЂРµРґСЃС‚РІР°
 	string CountryVehicle() {
 		string car_brand;
 
@@ -234,43 +234,43 @@ public:
 		return country_vehicle;
 	}
 
-	//Конструктор 1. Дефолтный
+	//РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ 1. Р”РµС„РѕР»С‚РЅС‹Р№
 
 	Vehicle() {
 		registration_number = "AA-487-AB";
-		value_axes = "The vehicle is multi-axle"; //наследование
-		country_vehicle = "France"; //наследование 
+		value_axes = "The vehicle is multi-axle"; //РЅР°СЃР»РµРґРѕРІР°РЅРёРµ
+		country_vehicle = "France"; //РЅР°СЃР»РµРґРѕРІР°РЅРёРµ 
 	}
 
-	//Конструктор 2. Недефолтный через список инициализаторов членов
+	//РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ 2. РќРµРґРµС„РѕР»С‚РЅС‹Р№ С‡РµСЂРµР· СЃРїРёСЃРѕРє РёРЅРёС†РёР°Р»РёР·Р°С‚РѕСЂРѕРІ С‡Р»РµРЅРѕРІ
 
 	Vehicle(string p_registation_number, string p_value_axes, string p_country_vehicle) : registration_number(p_registation_number), value_axes(p_value_axes), country_vehicle(p_country_vehicle)
 	{}
 
-	//Конструктор 3. Произвольный
+	//РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ 3. РџСЂРѕРёР·РІРѕР»СЊРЅС‹Р№
 	Vehicle(string p_cost_vehicle, string p_currency) {
-		this->cost_vehicle = p_cost_vehicle; //наследование
-		this->currency = p_currency; //наследование
+		this->cost_vehicle = p_cost_vehicle; //РЅР°СЃР»РµРґРѕРІР°РЅРёРµ
+		this->currency = p_currency; //РЅР°СЃР»РµРґРѕРІР°РЅРёРµ
 	}
 
-	//Конструктор 4. Произвольный
+	//РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ 4. РџСЂРѕРёР·РІРѕР»СЊРЅС‹Р№
 	Vehicle(string p_mileage) {
 		this->mileage = p_mileage;
 	}
 
-protected: //ассоциация
-	Employee* driving_employee; //работник, водящий транспортное средство (вид ассоциации: один-ко-многим)
-	Company* hiring_company; //компания, взявшая в аренду (вид ассоциации: один-ко-многим)
+protected: //Р°СЃСЃРѕС†РёР°С†РёСЏ
+	Employee* driving_employee; //СЂР°Р±РѕС‚РЅРёРє, РІРѕРґСЏС‰РёР№ С‚СЂР°РЅСЃРїРѕСЂС‚РЅРѕРµ СЃСЂРµРґСЃС‚РІРѕ (РІРёРґ Р°СЃСЃРѕС†РёР°С†РёРё: РѕРґРёРЅ-РєРѕ-РјРЅРѕРіРёРј)
+	Company* hiring_company; //РєРѕРјРїР°РЅРёСЏ, РІР·СЏРІС€Р°СЏ РІ Р°СЂРµРЅРґСѓ (РІРёРґ Р°СЃСЃРѕС†РёР°С†РёРё: РѕРґРёРЅ-РєРѕ-РјРЅРѕРіРёРј)
 };
 
 class Truck : protected Vehicle {
-private: //атрибуты
-	int mass; //атрибут из UML Class Diagram
-	string body_type; //специфический атрибут 1. Тип кузова
-	string fuel_type; //специфический атрибут 2. Тип топлива
+private: //Р°С‚СЂРёР±СѓС‚С‹
+	int mass; //Р°С‚СЂРёР±СѓС‚ РёР· UML Class Diagram
+	string body_type; //СЃРїРµС†РёС„РёС‡РµСЃРєРёР№ Р°С‚СЂРёР±СѓС‚ 1. РўРёРї РєСѓР·РѕРІР°
+	string fuel_type; //СЃРїРµС†РёС„РёС‡РµСЃРєРёР№ Р°С‚СЂРёР±СѓС‚ 2. РўРёРї С‚РѕРїР»РёРІР°
 
 public:
-	//метод 1
+	//РјРµС‚РѕРґ 1
 	string BodyType() {
 
 		string type;
@@ -295,7 +295,7 @@ public:
 		return body_type;
 	}
 
-	//метод 2
+	//РјРµС‚РѕРґ 2
 	string FuelType() {
 
 		string type;
@@ -319,31 +319,31 @@ public:
 		return fuel_type;
 	}
 
-	//Функция вывода для произв. конструктора 1
+	//Р¤СѓРЅРєС†РёСЏ РІС‹РІРѕРґР° РґР»СЏ РїСЂРѕРёР·РІ. РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° 1
 	void print11() {
 		cout << "\nFuel type: " << fuel_type << "\nCost Vehicle: " << cost_vehicle << "\nCurrency: " << currency << endl;
 	}
 
-	//Функция вывода для произв. конструктора 2
+	//Р¤СѓРЅРєС†РёСЏ РІС‹РІРѕРґР° РґР»СЏ РїСЂРѕРёР·РІ. РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° 2
 	void print22() {
 		cout << "Mileage: " << mileage << endl;
 	}
 
-	//Функция вывода для произв. конструктора 3
+	//Р¤СѓРЅРєС†РёСЏ РІС‹РІРѕРґР° РґР»СЏ РїСЂРѕРёР·РІ. РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° 3
 	void print33() {
 		cout << "Body type: " << body_type << "\nFuel type: " << fuel_type << "\nCost vehicle: " <<cost_vehicle<<"\nCurrency: "<< currency << endl;
 	}
 
-	//Произвольный конструктор 1 с использованием родительского класса
+	//РџСЂРѕРёР·РІРѕР»СЊРЅС‹Р№ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ 1 СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј СЂРѕРґРёС‚РµР»СЊСЃРєРѕРіРѕ РєР»Р°СЃСЃР°
 	Truck(string p_fuel_type, string cost_vehicle, string currency) : Vehicle(cost_vehicle, currency) {
 		fuel_type = p_fuel_type;
 	}
 
-	//Произвольный конструктор 2 с использованием родительского класса
+	//РџСЂРѕРёР·РІРѕР»СЊРЅС‹Р№ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ 2 СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј СЂРѕРґРёС‚РµР»СЊСЃРєРѕРіРѕ РєР»Р°СЃСЃР°
 	Truck(string mileage) : Vehicle(mileage) {
 	}
 
-	//Произвольный конструктор 3 с использованием родительского класса
+	//РџСЂРѕРёР·РІРѕР»СЊРЅС‹Р№ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ 3 СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј СЂРѕРґРёС‚РµР»СЊСЃРєРѕРіРѕ РєР»Р°СЃСЃР°
 	Truck(string p_body_type, string p_fuel_type, string cost_vehicle, string currency) : Vehicle(cost_vehicle, currency) {
 		body_type = p_body_type;
 		fuel_type = p_fuel_type;
@@ -351,13 +351,13 @@ public:
 };
 
 class Car : public Vehicle {
-private: //атрибуты
-	string transmission; //атрибут из UML Class Diagram
-	string actuator; //специфический атрибут 1. Привод
-	string modification; //специальный атрибут 2. Модификация (сборка)
+private: //Р°С‚СЂРёР±СѓС‚С‹
+	string transmission; //Р°С‚СЂРёР±СѓС‚ РёР· UML Class Diagram
+	string actuator; //СЃРїРµС†РёС„РёС‡РµСЃРєРёР№ Р°С‚СЂРёР±СѓС‚ 1. РџСЂРёРІРѕРґ
+	string modification; //СЃРїРµС†РёР°Р»СЊРЅС‹Р№ Р°С‚СЂРёР±СѓС‚ 2. РњРѕРґРёС„РёРєР°С†РёСЏ (СЃР±РѕСЂРєР°)
 
 public:
-	//метод 1
+	//РјРµС‚РѕРґ 1
 	string MethodActuator() {
 		string actuat;
 
@@ -382,7 +382,7 @@ public:
 
 	}
 
-	//метод 2
+	//РјРµС‚РѕРґ 2
 	string MethodModification() {
 		string modifi;
 
@@ -425,33 +425,33 @@ public:
 
 	}
 
-	//Функция вывода для произв. конструктора 1
+	//Р¤СѓРЅРєС†РёСЏ РІС‹РІРѕРґР° РґР»СЏ РїСЂРѕРёР·РІ. РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° 1
 	void print11() {
 		cout << "\nActuator: " << actuator << "\nCurrency: " << mileage << endl;
 	}
 
-	//Функция вывода для произв. конструктора 2
+	//Р¤СѓРЅРєС†РёСЏ РІС‹РІРѕРґР° РґР»СЏ РїСЂРѕРёР·РІ. РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° 2
 	void print22() {
 		cout << "Actuator: " << actuator << "\nModification: " << modification << "\nCost vehicle: " << mileage << endl;
 	}
 
-	//Функция вывода для произв. конструктора 3
+	//Р¤СѓРЅРєС†РёСЏ РІС‹РІРѕРґР° РґР»СЏ РїСЂРѕРёР·РІ. РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° 3
 	void print33() {
 		cout << "Mileage: " << mileage << endl;
 	}
 
-	//Произвольный конструктор 1 с использованием родительского класса
+	//РџСЂРѕРёР·РІРѕР»СЊРЅС‹Р№ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ 1 СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј СЂРѕРґРёС‚РµР»СЊСЃРєРѕРіРѕ РєР»Р°СЃСЃР°
 	Car(string p_actuator, string currency) : Vehicle (currency){
 		actuator = p_actuator;
 	}
 
-	//Произвольный конструктор 2 с использованием родительского класса
+	//РџСЂРѕРёР·РІРѕР»СЊРЅС‹Р№ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ 2 СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј СЂРѕРґРёС‚РµР»СЊСЃРєРѕРіРѕ РєР»Р°СЃСЃР°
 	Car(string p_actuator, string p_modification, string cost_vehicle) : Vehicle (cost_vehicle) {
 		actuator = p_actuator;
 		modification = p_modification;
 	}
 
-	//Произвольный конструктор 3 с использованием родительского класса
+	//РџСЂРѕРёР·РІРѕР»СЊРЅС‹Р№ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ 3 СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј СЂРѕРґРёС‚РµР»СЊСЃРєРѕРіРѕ РєР»Р°СЃСЃР°
 	Car(string mileage) : Vehicle (mileage){
 	}
 
@@ -460,12 +460,12 @@ public:
 
 int main() {
 
-	//Класс Company. Вывод значений дефолтного конструктора.
+	//РљР»Р°СЃСЃ Company. Р’С‹РІРѕРґ Р·РЅР°С‡РµРЅРёР№ РґРµС„РѕР»С‚РЅРѕРіРѕ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°.
 	cout << "1.1. Class Company. Default constructor" << endl;
 	Company yandex1;
 	yandex1.print();
 
-	//Класс Company. Вывод значений недефолтного конструктора через список инициализаторов-членов.
+	//РљР»Р°СЃСЃ Company. Р’С‹РІРѕРґ Р·РЅР°С‡РµРЅРёР№ РЅРµРґРµС„РѕР»С‚РЅРѕРіРѕ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° С‡РµСЂРµР· СЃРїРёСЃРѕРє РёРЅРёС†РёР°Р»РёР·Р°С‚РѕСЂРѕРІ-С‡Р»РµРЅРѕРІ.
 	cout << "\n1.2.Class Company. Non-default constructor" << endl;
 	Company yandex; 
 
@@ -474,12 +474,12 @@ int main() {
 
 	/////////////////////////////////////////////////
 
-	//Класс Employee. Вывод значений дефолтного конструктора.
+	//РљР»Р°СЃСЃ Employee. Р’С‹РІРѕРґ Р·РЅР°С‡РµРЅРёР№ РґРµС„РѕР»С‚РЅРѕРіРѕ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°.
 	cout << "\n2.1. Class Employee. Default constructor" << endl;
 	Employee person1;
 	person1.print();
 
-	//Класс Employee. Вывод значений недефолтного конструктора через список инициализаторов-членов.
+	//РљР»Р°СЃСЃ Employee. Р’С‹РІРѕРґ Р·РЅР°С‡РµРЅРёР№ РЅРµРґРµС„РѕР»С‚РЅРѕРіРѕ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° С‡РµСЂРµР· СЃРїРёСЃРѕРє РёРЅРёС†РёР°Р»РёР·Р°С‚РѕСЂРѕРІ-С‡Р»РµРЅРѕРІ.
 	cout << "\n2.2.Class Employee. Non-default constructor" << endl;
 	Employee person;
 
@@ -492,12 +492,12 @@ int main() {
 
 	/////////////////////////////////
 
-	//Класс Vehicle. Вывод значений дефолтного конструктора.
+	//РљР»Р°СЃСЃ Vehicle. Р’С‹РІРѕРґ Р·РЅР°С‡РµРЅРёР№ РґРµС„РѕР»С‚РЅРѕРіРѕ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°.
 	cout << "\n3.1. Class Vehicle. Default constructor" << endl;
 	Vehicle vehicle1;
 	vehicle1.print();
 
-	//Класс Vehicle. Вывод значений недефолтного конструктора через список инициализаторов-членов.
+	//РљР»Р°СЃСЃ Vehicle. Р’С‹РІРѕРґ Р·РЅР°С‡РµРЅРёР№ РЅРµРґРµС„РѕР»С‚РЅРѕРіРѕ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° С‡РµСЂРµР· СЃРїРёСЃРѕРє РёРЅРёС†РёР°Р»РёР·Р°С‚РѕСЂРѕРІ-С‡Р»РµРЅРѕРІ.
 	cout << "\n3.2. Class Vehicle. Non-default constructor" << endl;
 	Vehicle vehicle;
 
@@ -508,13 +508,13 @@ int main() {
 	Vehicle vehicle2{ registration_number, vehicle.Axes(), vehicle.CountryVehicle() };
 	vehicle2.print();
 
-	//Класс Vehicle. Произвольный конструктор 1.
+	//РљР»Р°СЃСЃ Vehicle. РџСЂРѕРёР·РІРѕР»СЊРЅС‹Р№ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ 1.
 	cout << "\n3.3. Class Vehicle. Custom constructor 1" << endl;
 
 	Vehicle vehicle3{ "5453", "dollars"};
 	vehicle3.print2();
 
-	//Класс Vehicle. Произвольный конструктор 2.
+	//РљР»Р°СЃСЃ Vehicle. РџСЂРѕРёР·РІРѕР»СЊРЅС‹Р№ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ 2.
 	cout << "\n3.4. Class Vehicle. Custom constructor 2" << endl;
 
 	Vehicle vehicle4("1324");
@@ -522,19 +522,19 @@ int main() {
 
 	////////////////////////////////////////
 	
-	//Класс Truck. Произвольный конструктор 1 с использованием родительского класса
+	//РљР»Р°СЃСЃ Truck. РџСЂРѕРёР·РІРѕР»СЊРЅС‹Р№ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ 1 СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј СЂРѕРґРёС‚РµР»СЊСЃРєРѕРіРѕ РєР»Р°СЃСЃР°
 	cout << "\n4.1. Class Truck. Constructor 1" << endl;
 
 	Truck truck1{"gas", "1000000", "dollars"};
 	truck1.print11();
 
-	//Класс Truck. Произвольный конструктор 2 с использованием родительского класса
+	//РљР»Р°СЃСЃ Truck. РџСЂРѕРёР·РІРѕР»СЊРЅС‹Р№ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ 2 СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј СЂРѕРґРёС‚РµР»СЊСЃРєРѕРіРѕ РєР»Р°СЃСЃР°
 	cout << "\n4.2. Class Truck. Constructor 2" << endl;
 
 	Truck truck2{ "10000 km" };
 	truck2.print22();
 
-	//Класс Truck. Произвольный конструктор 3 с использованием родительского класса
+	//РљР»Р°СЃСЃ Truck. РџСЂРѕРёР·РІРѕР»СЊРЅС‹Р№ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ 3 СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј СЂРѕРґРёС‚РµР»СЊСЃРєРѕРіРѕ РєР»Р°СЃСЃР°
 	cout << "\n4.3. Class Truck. Constructor 3" << endl;
 
 	Truck truck3{"close", "petrol", "23432", "pounds"};
@@ -542,19 +542,19 @@ int main() {
 
 	////////////////////////////////////////
 
-	//Класс Car. Произвольный конструктор 1 с использованием родительского класса
+	//РљР»Р°СЃСЃ Car. РџСЂРѕРёР·РІРѕР»СЊРЅС‹Р№ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ 1 СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј СЂРѕРґРёС‚РµР»СЊСЃРєРѕРіРѕ РєР»Р°СЃСЃР°
 	cout << "\n4.1. Class Car. Constructor 1" << endl;
 
 	Car car1{"front-wheel drive" ,"euro"};
 	car1.print11();
 
-	//Класс Car. Произвольный конструктор 2 с использованием родительского класса
+	//РљР»Р°СЃСЃ Car. РџСЂРѕРёР·РІРѕР»СЊРЅС‹Р№ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ 2 СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј СЂРѕРґРёС‚РµР»СЊСЃРєРѕРіРѕ РєР»Р°СЃСЃР°
 	cout << "\n4.2. Class Car. Constructor 2" << endl;
 
 	Car car2{"front-wheel drive", "B", "433"};
 	car2.print22();
 
-	//Класс Car. Произвольный конструктор 3 с использованием родительского класса
+	//РљР»Р°СЃСЃ Car. РџСЂРѕРёР·РІРѕР»СЊРЅС‹Р№ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ 3 СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј СЂРѕРґРёС‚РµР»СЊСЃРєРѕРіРѕ РєР»Р°СЃСЃР°
 	cout << "\n4.3. Class Car. Constructor 3" << endl;
 
 	Car car3{"3423 km"};
